@@ -886,7 +886,6 @@ on zygote-start && property:persist.sys.fuse=""
 on zygote-start && property:ro.crypto.state=unencrypted
     # A/B update verifier that marks a successful boot.
     exec_start update_verifier_nonencrypted
-    start statsd
     start netd
     start zygote
     start zygote_secondary
@@ -894,7 +893,6 @@ on zygote-start && property:ro.crypto.state=unencrypted
 on zygote-start && property:ro.crypto.state=unsupported
     # A/B update verifier that marks a successful boot.
     exec_start update_verifier_nonencrypted
-    start statsd
     start netd
     start zygote
     start zygote_secondary
@@ -902,7 +900,6 @@ on zygote-start && property:ro.crypto.state=unsupported
 on zygote-start && property:ro.crypto.state=encrypted && property:ro.crypto.type=file
     # A/B update verifier that marks a successful boot.
     exec_start update_verifier_nonencrypted
-    start statsd
     start netd
     start zygote
     start zygote_secondary
